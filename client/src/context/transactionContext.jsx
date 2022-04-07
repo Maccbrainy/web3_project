@@ -13,14 +13,17 @@ export const TransactionsDataProvider = ({children}) => {
     const handleChange = (e, name) => {
         setInputFormData((prevState) => ({...prevState, [name]: e.target.value}));
     };
+
     
     const connectWallet = async() => {
         alert("Install metamask to continue")
     }
 
+
     const sendTransaction = async() => {
-        alert("Install ether to interact with the blockchain");
+        alert("Install metamask to continue");
     }
+    
 
     return (
         <TransactionContext.Provider value={{

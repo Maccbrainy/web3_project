@@ -67,7 +67,7 @@ const Welcome = () => {
                             </div>
                             <p className="text-white">...</p>
                         </div>
-                        <p className="text-white">Ethereum</p>
+                        <p className="text-white text-lg">Ethereum</p>
                     </div>
                     <div className="flex p-5 mt-10 blue-glassmorphism sm:w-96 w-full items-center justify-start flex-col white-glassmorphism">
                         <InputFormComponent type="text" name="addressTo" placeholder="Address To" handleChange={handleChange}/>
