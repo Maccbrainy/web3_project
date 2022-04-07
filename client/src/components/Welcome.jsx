@@ -57,7 +57,7 @@ const Welcome = () => {
                     </div>
                 </div>
                 <div className="flex flex-col flex-1 w-full justify-start items-center mf:mt-0 mt-10">
-                    <div className="flex flex-col justify-end sm:w-72 eth-card w-full h-40 rounded-xl white-glassmorphism">
+                    <div className="flex flex-col justify-end sm:w-72 eth-card w-full h-40 rounded-xl white-glassmorphism p-2">
                         <div className="flex justify-between flex-col h-full w-full">
                             <div className="flex justify-between items-start">
                                 <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center">
@@ -65,9 +65,9 @@ const Welcome = () => {
                                 </div>
                                 <BsInfoCircle fontSize={17} color="#fff"/> 
                             </div>
-                            ...
+                            <p className="text-white">...</p>
                         </div>
-                        Ethereum
+                        <p className="text-white">Ethereum</p>
                     </div>
                     <div className="flex p-5 mt-10 blue-glassmorphism sm:w-96 w-full items-center justify-start flex-col white-glassmorphism">
                         <InputFormComponent type="text" name="addressTo" placeholder="Address To" handleChange={handleChange}/>
