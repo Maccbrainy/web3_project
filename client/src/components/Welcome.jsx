@@ -3,6 +3,7 @@ import { AiFillPlayCircle } from "react-icons/ai";
 import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 import {TransactionContext}  from "../context/transactionContext";
+import {shortenAddress} from "../utils/shortenAddress";
 
 const commonStyleGridDisplay = "min-h-[70px] px-2 flex justify-center items-center text-white border-[0.5px] border-gray-400";
 
@@ -45,7 +46,7 @@ const Welcome = () => {
                     type="button" 
                     className="flex items-center bg-[#2952e3] hover:bg-[#2546bd] rounded-full cursor-pointer p-4 my-7">
                         <AiFillPlayCircle className="text-white mr-2" />
-                        <p className="text-white text-base font-semibold">Connect wallet</p>
+                        <p className="text-white text-base font-semibold">{currentAccount ? "Wallet is connected": "Connect Wallet"}</p>
                     </button>
                     <div className="grid grid-cols-3 w-full mt-10">
                         <div className={`rounded-tl-2xl ${commonStyleGridDisplay}`}>Ethereum</div>
@@ -65,7 +66,7 @@ const Welcome = () => {
                                 </div>
                                 <BsInfoCircle fontSize={17} color="#fff"/> 
                             </div>
-                            <p className="text-white">{currentAccount}</p>
+                            <p className="text-white">{shortenAddress(currentAccount)}</p>
                         </div>
                         <p className="text-white text-lg">Ethereum</p>
                     </div>
