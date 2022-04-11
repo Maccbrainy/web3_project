@@ -20,7 +20,7 @@ const InputFormComponent = ({type, name, placeholder,value, handleChange}) => {
 
 
 const Welcome = () => {
-    const {connectWallet, inputFormData, handleChange, sendTransaction} = useContext(TransactionContext);
+    const {connectWallet, inputFormData, handleChange, sendTransaction, currentAccount} = useContext(TransactionContext);
 
     const submitInputFormData = (e) => {
         
@@ -65,7 +65,7 @@ const Welcome = () => {
                                 </div>
                                 <BsInfoCircle fontSize={17} color="#fff"/> 
                             </div>
-                            <p className="text-white">...</p>
+                            <p className="text-white">{currentAccount}</p>
                         </div>
                         <p className="text-white text-lg">Ethereum</p>
                     </div>
