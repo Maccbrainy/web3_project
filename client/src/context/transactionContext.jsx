@@ -27,7 +27,7 @@ export const TransactionsDataProvider = ({children}) => {
         message:""
     });
     const [ isLoading, setIsLoading] = useState(false);
-    const [ transactionCount, setTransactionCount] = useState(0);
+    const [ transactionCount, setTransactionCount] = useState(localStorage.getItem('transactionCount'));
 
     const handleChange = (e, name) => {
         setInputFormData((prevState) => ({...prevState, [name]: e.target.value}));
@@ -118,6 +118,7 @@ export const TransactionsDataProvider = ({children}) => {
             inputFormData,
             currentAccount,
             sendTransaction,
+            isLoading,
             getEthereumContract
         }}>
             {children}
