@@ -20,8 +20,8 @@ const Services = () => {
         <div className="flex w-full justify-center items-center gradient-bg-services">
             <div className="flex md:flex-row flex-col items-center justify-between md:p-20 py-20 px-4 m-auto max-w-7xl">
                 <div className="flex-1 flex flex-col justify-start items-start">
-                    <h1 className="text-white text-5xl font-medium sm:text-5xl text-gradient">Services that we <br/> continue to improve</h1>
-                    <p className="text-white text-base my-5 font-light md:w-10/12 w-11/12">The best choice for buying and selling your crypto assets, with the various super friendly services we offer
+                    <h1 className="text-white font-medium xs:text-center xs:text-4xl xs:mb-10 sm:text-5xl text-gradient">Services that we <br/> continue to improve</h1>
+                    <p className="text-white text-base my-5 font-light xs:hidden md:w-10/12 w-11/12">The best choice for buying and selling your crypto assets, with the various super friendly services we offer
                     </p>
                 </div>
                 <div className="flex-1 flex flex-col justify-start items-center">
