@@ -103,6 +103,8 @@ export const TransactionsDataProvider = ({children}) => {
             const transactionCount = await transactionContract.getTransactionCount();
 
             setTransactionCount(transactionCount.toNumber());
+            
+            window.location.reload();
 
         } catch (error) {
             console.log(error);
@@ -119,6 +121,7 @@ export const TransactionsDataProvider = ({children}) => {
             currentAccount,
             sendTransaction,
             isLoading,
+            transactionCount,
             getEthereumContract
         }}>
             {children}
