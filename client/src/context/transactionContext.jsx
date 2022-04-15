@@ -88,7 +88,7 @@ export const TransactionsDataProvider = ({children}) => {
                     from:currentAccount,
                     to: addressTo,
                     gas:'0x5208', //21000 GWEI
-                    amount: parsedAmount._hex
+                    value: parsedAmount._hex
                 }]
             });
             //Transaction hash which is the transaction id
