@@ -4,7 +4,7 @@ import dummyData from "../utils/dummyData";
 import { shortenAddress } from "../utils/shortenAddress";
 
 const TransactionCard = () => {
-   return(<div>Transactions</div>)
+   return(<div></div>)
 }
 
 const Transactions = () => {
