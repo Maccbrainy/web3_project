@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { SiEthereum } from "react-icons/si";
-import { BsInfoCircle } from "react-icons/bs";
+import { BsInfoCircle, BsFillRecord2Fill } from "react-icons/bs";
 import {TransactionContext}  from "../context/transactionContext";
 import {shortenAddress} from "../utils/shortenAddress";
+import { Loader } from ".";
 
 const commonStyleGridDisplay = "min-h-[70px] px-2 flex justify-center items-center text-white border-[0.5px] border-gray-400";
 
@@ -21,7 +22,7 @@ const InputFormComponent = ({type, name, placeholder,value, handleChange}) => {
 
 
 const Welcome = () => {
-    const {connectWallet, inputFormData, handleChange, sendTransaction, currentAccount} = useContext(TransactionContext);
+    const {connectWallet, isLoading, reCheckCurrentAccount, inputFormData, handleChange, sendTransaction, currentAccount} = useContext(TransactionContext);
 
     const submitInputFormData = (e) => {
         
@@ -40,18 +41,27 @@ const Welcome = () => {
                 <div className="flex flex-1 justify-start items-start flex-col md:mr-10">
                    <h1 className="text-5xl sm:text-6xl font-medium py-1 text-white text-gradient">Send Crypto <br/> across the world</h1>
                     <p className="text-white mt-5 font-light md:w-9/12 w-11/12 text-base">Explore the crypto world. Buy and sell cryptocurrencies easily with Cryptop.
-                    </p> 
-                    <button
+                    </p>
+
+                    { !currentAccount ? 
+                    (<button
                     onClick={connectWallet} 
                     type="button" 
                     className="flex items-center bg-[#2952e3] hover:bg-[#2546bd] rounded-full cursor-pointer p-4 my-7">
                         <AiFillPlayCircle className="text-white mr-2" />
-                        <p className="text-white text-base font-semibold">{currentAccount ? "Wallet is connected": "Connect Wallet"}</p>
-                    </button>
+                        <p className="text-white text-base font-semibold">Connect wallet</p>
+                    </button>)
+                        : (<button onClick={reCheckCurrentAccount}
+                            type="button" 
+                            className="flex items-center bg-[#2952e3] rounded-full cursor-pointer p-4 my-7">
+                                <BsFillRecord2Fill className="text-white mr-2" />
+                                    <p className="text-white text-base font-semibold">Wallet is connected</p>
+                            </button>)
+                    }
                     <div className="grid grid-cols-3 w-full mt-10">
                         <div className={`rounded-tl-2xl ${commonStyleGridDisplay}`}>Ethereum</div>
-                        <div className={`rounded-none ${commonStyleGridDisplay}`}>Polygon</div>
-                        <div className={`rounded-tr-2xl ${commonStyleGridDisplay}`}>Solana</div>
+                        <div className={`rounded-none ${commonStyleGridDisplay}`}>Security</div>
+                        <div className={`rounded-tr-2xl ${commonStyleGridDisplay}`}>Low fees</div>
                         <div className={`rounded-bl-2xl ${commonStyleGridDisplay}`}>Reliable</div>
                         <div className={`rounded-none ${commonStyleGridDisplay}`}>Web 3.0</div>
                         <div className={`rounded-br-2xl ${commonStyleGridDisplay}`}>Blockchain</div>
@@ -78,12 +88,14 @@ const Welcome = () => {
 
                         <div className="h-[1px] w-full bg-gray-400 my-4"></div>
 
-                        <button
+                        { isLoading ?  
+                        (<Loader title={`Processing...`} height={`h-8`} width={`w-8`}/>) : (<button
                             onClick={submitInputFormData}
                             type="button"
                             className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#3d4f7c] rounded-full cursor-pointer">
                             Send now
-                        </button>
+                        </button>)
+                        }
                     </div>
                 </div>
             </div>
