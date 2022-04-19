@@ -29,17 +29,17 @@ const Services = () => {
                         cardIcon={<BsShieldFillCheck color="#ffff" fontSize={21}/>}
                         iconColor="bg-[#2952E3]" 
                         title="Security Guaranteed"
-                        paragraph="Security is guaranteed, we always maintain provacy and maintain the quality of our product"/>
+                        paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"/>
                     <ServicesCard
                         cardIcon={<BiSearchAlt color="#ffff" fontSize={21}/>}
                         iconColor="bg-[#8945f8]" 
                         title="Best Exchange Rates"
-                        paragraph="Security is guaranteed, we always maintain provacy and maintain the quality of our product"/>
+                        paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."/>
                     <ServicesCard
                         cardIcon={<RiHeart2Fill color="#ffff" fontSize={21}/>}
                         iconColor="bg-[#f84550]" 
                         title="Fast Transactions"
-                        paragraph="Security is guaranteed, we always maintain provacy and maintain the quality of our product"/>
+                        paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"/>
                 </div> 
             </div>
         </div>
