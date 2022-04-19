@@ -5,7 +5,7 @@ export default [
         message:"",
         addressFrom:"0xhdknkmnjndkjn33njkbr3k298032",
         addressTo:"bd48j89ep23me3k2mdjkdoidji837h3e8",
-        amount:"0.01",
+        amount:"0.91",
         url:""
     },
     {
@@ -14,7 +14,7 @@ export default [
         message:"",
         addressFrom:"0xhdknkmnjndkjn33njkbr3k298032",
         addressTo:"bd48j89ep23me3k2mdjkdoidji837h3e8",
-        amount:"0.01",
+        amount:"0.51",
         url:""
     },
     {
@@ -23,7 +23,7 @@ export default [
         message:"",
         addressFrom:"0xhdknkmnjndkjn33njkbr3k298032",
         addressTo:"bd48j89ep23me3k2mdjkdoidji837h3e8",
-        amount:"0.01",
+        amount:"0.15",
         url:""
     },
     {
@@ -32,7 +32,7 @@ export default [
         message:"",
         addressFrom:"0xhdknkmnjndkjn33njkbr3k298032",
         addressTo:"bd48j89ep23me3k2mdjkdoidji837h3e8",
-        amount:"0.01",
+        amount:"0.39",
         url:""
     },
     {
@@ -41,7 +41,7 @@ export default [
         message:"",
         addressFrom:"0xhdknkmnjndkjn33njkbr3k298032",
         addressTo:"bd48j89ep23me3k2mdjkdoidji837h3e8",
-        amount:"0.01",
+        amount:"0.9",
         url:""
     },
     {
@@ -50,7 +50,7 @@ export default [
         message:"",
         addressFrom:"0xhdknkmnjndkjn33njkbr3k298032",
         addressTo:"bd48j89ep23me3k2mdjkdoidji837h3e8",
-        amount:"0.01",
+        amount:"0.08",
         url:""
     },
     {
@@ -59,7 +59,7 @@ export default [
         message:"",
         addressFrom:"0xhdknkmnjndkjn33njkbr3k298032",
         addressTo:"bd48j89ep23me3k2mdjkdoidji837h3e8",
-        amount:"0.01",
+        amount:"0.05",
         url:""
     },
 ]
