@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import {TransactionContext}  from "../context/transactionContext";
-import { BsArrowRight } from "react-icons/bs";
+import { BsBoxArrowUpRight } from "react-icons/bs";
 import { Loader } from ".";
 // import dummyData from "../utils/dummyData";
 import { shortenAddress } from "../utils/shortenAddress";
@@ -18,11 +18,11 @@ const TransactionCard = ({addressFrom, addressTo, amount, message, keyword, time
               <a className="flex justify-between" href={`https://ropsten.etherscan.io/address/${addressFrom}`} target="_blank" rel="nonreferrer">
                 <p className="text-white text-base">
                     From: <span className="hover:text-[#37c7da]">{shortenAddress(addressFrom)}</span></p>
-                <BsArrowRight className="hover:text-[#fff] text-[#37c7da]"/>
+                <BsBoxArrowUpRight className="hover:text-[#fff] text-[#37c7da]"/>
             </a>
             <a className="flex justify-between" href={`https://ropsten.etherscan.io/address/${addressTo}`} target="_blank" rel="nonreferrer">
                 <p className="text-white text-base">To: <span className="hover:text-[#37c7da]">{shortenAddress(addressTo)}</span></p>
-                <BsArrowRight className="hover:text-[#fff] text-[#37c7da]"/>
+                <BsBoxArrowUpRight className="hover:text-[#fff] text-[#37c7da]"/>
             </a>
             <p className="text-white text-base">Amount: {amount} ETH</p>
             {message && (
